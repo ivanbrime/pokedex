@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'BBH Sans Bogle', sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #08e0ec, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  display: inline-block;
+  position: relative;
+  padding: 15px;
+}
+
+.pokedex {
+  width: 400px;
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Imagem do Pokémon posicionada dentro da tela da Pokédex */
+.pokemon_images {
+  position: absolute;
+  top: 28%;         /* Ajusta a altura vertical */
+  left: 36%;        /* Ajusta a posição horizontal */
+  width: 28%;       /* Largura proporcional ao visor */
+  height: auto;     /* Mantém proporção da imagem */
+  z-index: 2;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); /* Efeito visual opcional */
+}
+
+/* Nome e número do Pokémon */
+.pokemon_data {
+  position: absolute;
+  font-weight: 600;
+  color: #aaa;
+  top: 54.5%;
+  right: 27%;
+  font-size: clamp(8px, 5vw, 25px);
+  z-index: 3;
+}
+
+/* Campo de busca */
+.form {
+  position: absolute;
+  top: 65%;
+  left: 13%;
+  width: 60%;
+  z-index: 3;
+}
+
+.input_search {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Botões de navegação */
+.buttons {
+  position: absolute;
+  top: 75%;
+  left: 13%;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  gap: 20px;
+    font-size: clamp(8px, 5vw, 20px);
+}
+
+.button:hover {
+  background-color: #00ffd5;
+    font-size: 10px;
+}
+.button:active {
+  background-color: #00bfa1;
+  font-size: 10px;
+}
